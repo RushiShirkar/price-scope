@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://price-scope-liart.vercel.app' || 'http://localhost:8000';
+const API_BASE_URL = 'https://price-scope-liart.vercel.app';
 
 // Function to get flag emoji from country code
 function getFlagEmoji(countryCode) {
@@ -338,6 +338,16 @@ function displayResults(results, product, country) {
     // Populate the results grid
     const resultsGrid = document.getElementById('resultsGrid');
     let gridHtml = '';
+
+    if (results.length === 0) {
+        gridHtml = `
+            <div class="no-results">
+                <i class="fas fa-search"></i>
+                <h3>No results found</h3>
+                <p>Try a different product name or country</p>
+            </div>
+        `;
+    }
     
     results.forEach((item, index) => {
         const rankClass = index === 0 ? 'first' : index === 1 ? 'second' : index === 2 ? 'third' : '';
