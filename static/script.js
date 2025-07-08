@@ -1,4 +1,6 @@
-const API_BASE_URL = 'https://price-scope-liart.vercel.app';
+const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+    ? 'http://localhost:8000' 
+    : 'https://price-scope-liart.vercel.app';
 
 // Function to get flag emoji from country code
 function getFlagEmoji(countryCode) {
