@@ -165,3 +165,4 @@ chromedriver
 *.tmp
 *.bak
 *.backup 
+.vercel

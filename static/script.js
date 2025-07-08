@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = 'https://price-scope-liart.vercel.app' || 'http://localhost:8000';
 
 // Function to get flag emoji from country code
 function getFlagEmoji(countryCode) {
