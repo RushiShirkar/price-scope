@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PriceScope - Smart Price Discovery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <a href="#" class="brand-logo">
+                <div class="brand-icon">🔍</div>
+                PriceScope
+            </a>
+            <h1 class="hero-title">Smart Price Discovery</h1>
+            <p class="hero-subtitle">Compare prices across retailers worldwide with intelligent search technology</p>
+        </div>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <form class="search-form" id="searchForm">
+                <div class="form-field">
+                    <label class="field-label" for="product">Product</label>
+                    <input 
+                        type="text" 
+                        id="product" 
+                        class="field-input" 
+                        placeholder="Enter product name or model..."
+                        required
+                    >
+                </div>
+                <div class="form-field">
+                    <label class="field-label" for="country">Market</label>
+                    <select id="country" class="field-input field-select" required>
+                        <option value="">Choose country...</option>
+                    </select>
+                </div>
+                <button type="submit" class="search-button" id="searchBtn">
+                    <span>🔍</span>
+                    <span>Search</span>
+                </button>
+                <div class="clear-btn-container" id="clearBtnContainer">
+                    <button type="button" class="clear-button" id="clearBtn">
+                        <span>✕</span>
+                        <span>Clear</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Loading State -->
+        <div class="loading-section" id="loadingDiv">
+            <div class="loading-spinner"></div>
+            <h3 class="loading-title">Searching for best prices...</h3>
+            <p class="loading-description">Analyzing retailers and comparing offers</p>
+        </div>
+
+        <!-- Error State -->
+        <div class="error-section" id="errorDiv"></div>
+
+        <!-- Results Section -->
+        <div class="results-section" id="resultsDiv"></div>
+    </div>
+
+    <script src="/static/script.js" defer></script>
+</body>
+</html> 
